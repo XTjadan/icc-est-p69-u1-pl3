@@ -17,15 +17,16 @@ public class IncidenteController {
         while (low <= high) {
             int mid = (high - low) / 2;
             int com = incidentes.get(mid).compareTo(objetivo);
-            if(comp > 0){
+            if(com > 0){
                 low = mid + 1;
 
 
             }else {
-                high= mid -1;
+                high= mid - 1;
             }
             
-            return 0;
+            
         }
+        return -1; 
     }
 }
