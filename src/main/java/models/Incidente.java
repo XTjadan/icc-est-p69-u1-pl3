@@ -56,7 +56,7 @@ public class Incidente implements Comparable<Incidente> {
         //CANTIDAD DE SERVICIOS servicio.size()
         .thenComparing((Incidente i)-> i.getServicios().size(), Comparator.reverseOrder())
         .thenComparing((Incidente i) -> {
-            int sumUserA = 0;
+            long sumUserA = 0L;
             for(ServicioAfectado ServicioAfectado : i.getServicios()) {
                 sumUserA += ServicioAfectado.usuariosAfectados();
             }
